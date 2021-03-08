@@ -1,0 +1,34 @@
+<% layout('layouts/boilerplate') %>
+<div class="container my-3">
+  <h2 class="text-center">Mens frangrances</h2>
+  <%- include('../partials/sort')%>
+
+  <div class="row sort-container">
+    <% for(let product of products) {%>
+    <div class="col-lg-4 col-md-6 col-sm-12 item">
+      <div class="card text-center mx-auto my-5 border-0" style="width: 18rem">
+        <img src="<%= product.images[0].url%>" class="card-img-top custom-card-img-top mx-auto" alt="scent photo" />
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name.title%></h5>
+          <p class="card-text brand"><%= product.name.brand%></p>
+          <p class="avgRat"><%= product.calculateAvgRating() %></p>
+          <span class="d-none average"></span>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= product.type %></li>
+          <% if(product.prices[0].isOnSale && product.prices[0].salePrice < product.prices[0].price) {%>
+          <li class="list-group-item text-danger" data-price="<%=product.prices[0].salePrice%>">from £<%= product.prices[0].salePrice%></li>
+          <% } else { %>
+          <li class="list-group-item" data-price="<%=product.prices[0].price%>">from £<%= product.prices[0].price%></li>
+          <% } %><% for(let price of product.prices) {%> <% if(price.isOnSale) {%>
+          <li class="list-group-item text-danger"><i class="bi bi-percent"></i> SALE <i class="bi bi-percent"></i></li>
+          <%break; } %> <% } %>
+        </ul>
+        <a class="stretched-link" href="/products/<%=product._id%>"></a>
+      </div>
+    </div>
+    <%}%>
+  </div>
+</div>
+
+<script src="/JS/sort.js"></script>

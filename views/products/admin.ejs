@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <div class="container my-3">
+        <h3 class="mb-5 p-2">Admin's Panel</h3>
+        <div class="my-4">
+            <p><a href="/products/new" class="btn btn-success">Add new product</a></p>
+            <hr>
+            <% for(let product of products) {%>
+                <div class="row justify-content-center align-items-end">
+                    <div class="col-md-10 col-sm-8 ">
+                        <p class="m-0"><a class="link-dark text-decoration-none" href="/products/<%=product._id%>">
+                            <span class="fw-bolder"><%= product.name.brand%></span>
+                            <%= product.name.title %></a>
+                        </p>
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                        <a href="/products/<%=product._id%>/edit" class="btn btn-success btn-sm m-1">EDIT</a>
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                        <form method="POST" action="/products/<%=product._id%>?_method=DELETE">
+                            <button class="btn btn-danger btn-sm m-1">DELETE</button>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <% } %>
+        </div>
+
+        <div class="my-4">
+            <p><a href="/brands/new" class="btn btn-success">Add new brand</a></p>
+            <hr>
+            <% for(let brand of brands){ %>
+                <div class="row justify-content-center align-items-end">
+                    <div class="col-md-10 col-sm-8 ">
+                        <p class="m-0"><a class="link-dark text-decoration-none" href="/brands/<%=brand._id%>"><span class="fw-bolder"><%=brand.name%></a></p></span>
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                        <a href="/brands/<%=brand._id%>/edit" class="btn btn-success btn-sm">EDIT</a>
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                        <form method="POST" action="/brands/<%=brand._id%>?_method=DELETE">
+                            <button class="btn btn-danger btn-sm">DELETE</button>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <% } %>
+        </div>
+    </div>

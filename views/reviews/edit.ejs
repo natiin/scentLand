@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate') %>
+
+  <div class="container my-5 mb-3">
+    <p class="fs-4 text-center">edit your review</p>
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <form class="needs-validation my-3" method="POST" action="/products/<%= product._id%>/reviews/<%= review._id%>?_method=PUT" novalidate>
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="stars">
+                <% for (let i=0; i<review.rating; i++) {%><i class="bi bi-star-fill custom-stars-red"></i>
+                  <%}%>
+                    <% for (let i=review.rating; i<5; i++) {%><i class="bi bi-star custom-stars-red"></i>
+                      <%}%>
+              </div>
+              <label for="rating" class="form-label"></label>
+              <input type="range" class="form-range d-none" min="1" max="5" id="rating" value="<%= review.rating %>" name="rating" />
+              <div class="review">
+                <p class="fst-italic"><%=review.author.username%></p>
+                <small class="date-convert"><%=review.date%></small>
+              </div>
+              </div>
+            <div class="text-center">
+              <p><%= product.name.brand %></p>
+              <p><%= product.name.title %></p>
+              <%if(product.images && product.images.length) { %>
+                <img src="<%=product.images[0].xs%> " alt="perfume-photo">
+                <% } %>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="review-body" class="form-label"></label>
+            <textarea class="form-control" id="review-body" style="height: 100px" name="body" placeholder="add your review here..." required><%= review.body %></textarea>
+          </div>
+          <button class="btn btn-outline-secondary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/JS/dateConverter.js"></script>
+  <script src="/JS/starsFiller.js"></script>

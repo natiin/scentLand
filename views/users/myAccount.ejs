@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-sm-10 col-md-8 offset-md-2 col-lg-10">
+                <div class="mb-5">
+                    <p class="fs-3"><%= user.username  %> </p>
+                      <p>My reviews</p>
+                <% for(let product of products){%>
+                    <% for(let review of product.reviews) {%> 
+                       
+                            <div class="card mt-3 review">
+                            <div class="card-body">
+                                 <div class="d-flex">
+                                <div class="p-3">
+                                    <a href="/products/<%= product._id%>"><img src="<%=product.images[0].xs%>"></a>
+                                </div>
+                                <div class="p-3">
+                                    <p><span class="date-convert small"><%=(review.date)%></span></p>
+                                    <p class="mx-1">
+                                    <% for (let i=0; i<review.rating; i++) {%>
+                                    <i class="bi bi-star-fill custom-stars-grey"></i>
+                                    <%}%>
+                                    <% for (let i=review.rating; i<5; i++) {%>
+                                    <i class="bi bi-star custom-stars-grey"></i>
+                                    <%}%>
+                                    </p>
+                                    <p class="card-text"><%=review.body%></p>
+                                    <% if(review.edited.edited) {%>
+                                        <p class="text-muted p-0 m-0">
+                                            <span class="fst-italic small"> this review has been edited on<span class="date-convert small"><%= review.edited.date %></span></span>
+                                        </p>
+                                    <%}%>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    <%}%> 
+                <%}%>
+                </div>
+                <div class="mb-5 text-justify">
+                    <p>My orders</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consectetur rerum labore eos minima velit facilis ducimus quod fuga quae illum, temporibus odit debitis. Praesentium est doloribus voluptatem! Laboriosam, ad.</p>
+                </div>
+                <div class="mb-5 text-justify">
+                    <p>My wishlist</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consectetur rerum labore eos minima velit facilis ducimus quod fuga quae illum, temporibus odit debitis. Praesentium est doloribus voluptatem! Laboriosam, ad.</p>
+                </div>
+            </div>    
+        </div>
+    </div>
+    
+
+    <script src="/JS/dateConverter.js"></script>

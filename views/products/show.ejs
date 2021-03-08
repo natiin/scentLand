@@ -1,0 +1,203 @@
+<% layout('layouts/boilerplate') %>
+  <div class="container my-3" id="product-show-page" data-product-id="<%=product.id%>">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-xl-8 my-5">
+        <div class="card mb-3 border-0 custom-card">
+          <div class="row g-0 ">
+            <div class="col-md-6">
+              <%if(product.images && product.images.length) { %>
+                <img src="<%= product.images[0].url%>" id="main-image-scent" class="custom-card-img-show-page">
+                <% } %>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="card-body">
+                <h4 class="card-title"><%= product.name.title%></h4>
+                <h4 class="card-title"><%= product.name.brand%></h4>
+                <h6 class="card-subtitle text-muted"><%= product.type%></h6>
+                <p class="mt-2 mb-0 avgRat"><%= product.calculateAvgRating() %></p>
+                <p class="votes-rating"><span class="average"></span>, votes: <%= product.reviews.length%></p>
+                <div class="d-flex flex-wrap justify-content-evenly">
+                  <% for(let price of product.prices) {%>
+                    <div class="price-box  btn btn-outline-secondary my-4">
+                      <h5>
+                      <% if(price.isOnSale){ %>
+                      <span class="text-danger price">£<%=price.salePrice %></span>
+                      <% } %>
+                      <span class="<%=(price.isOnSale)? " text-decoration-line-through" : "price" %>">£<%=price.price%></span>
+                      </h5>
+                      <h6 class="size"><%= price.size%>ml</h6>
+                    </div>
+                  <% } %>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button class="btn btn-outline-secondary add-to-bag-btn w-100">ADD TO BAG</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% if(product.images && product.images.length>1) {%>
+              <div>
+                <% for(let img of product.images) {%>
+                  <img src="<%= img.url%>" class="card-imgs-collection shadow p-1 mb-5 bg-body rounded">
+                  <% } %>
+              </div>
+              <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-none d-lg-block">
+      <div class="my-5">
+        <p class="fs-4">DESCRIPTION</p>
+        <hr />
+        <p class="mb-5 text-justify"><%=product.description %></p>
+        <p>Olfactory Group: <%= product.scent%></p>
+        <p>Gender: <%= product.gender.join(", ")%></p>
+      <p>Top Notes: <span class=" fst-italic">
+            <%= product.notes.topNotes.join(", ")%></span></p>
+      <p>Middle Notes:<span class=" fst-italic">
+              <%= product.notes.middleNotes.join(", ")%></span></p>
+      <p>Base Notes: <span class=" fst-italic">
+                <%= product.notes.baseNotes.join(", ") %></span></p>
+      <% if(product.LaunchYear && product.launchYear > 0){%>
+      <p>Launch Year: <%= product.launchYear%></p>
+      <% } %> 
+    </div>
+  </div>
+  <div class="row d-none d-lg-block">
+    <div class="col-lg-8 my-5">
+      <p class="fs-4">REVIEWS</p>
+      <% if(currentUser){%>
+      <form class="needs-validation my-3" method="POST" action="/products/<%= product._id%>/reviews"novalidate>
+        <div class="stars">
+          <i class="bi bi-star custom-stars-red"></i><i class="bi bi-star custom-stars-red"></i><i class="bi bi-star custom-stars-red"></i><i class="bi bi-star custom-stars-red"></i><i class="bi bi-star custom-stars-red"></i>
+          <label for="rating" class="form-label"></label>
+            <input type="range" class="form-range d-none" min="1" max="5" id="rating" value="1" name="rating" />
+        </div>
+        <div class="mb-3">
+          <label for="review-body" class="form-label"></label>
+          <textarea class="form-control" id="review-body" style="height: 100px" name="body" placeholder="add your review here..." required></textarea>
+        </div>
+        <button class="btn btn-outline-secondary">Add review</button>
+      </form>
+      <% } %>
+      <div class="col-12">
+      <% for(let review of product.reviews){%>
+        <div class="card mt-3 review">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="card-title fst-italic"><%=review.author.username%>
+                <% for (let i=0; i<review.rating; i++) {%>
+                  <i class="bi bi-star-fill custom-stars-grey"></i>
+                <%}%>
+                <% for (let i=review.rating; i<5; i++) {%>
+                  <i class="bi bi-star custom-stars-grey"></i>
+                <%}%>
+              </p>
+              <p><span class="date-convert small"><%=(review.date)%></span></p>
+            </div>
+              <p class="card-text"><%=review.body%></p>
+              <% if(review.edited.edited) {%>
+              <p class="text-muted p-0 m-0"><span class="fst-italic small"> this review has been edited on <span class="date-convert"><%= review.edited.date %></span></span></p>
+              <% } %>
+          </div>
+        </div>
+        <%if(currentUser && review.author.equals(currentUser._id)) {%>
+        <form class="d-inline" action="/products/<%=product._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+          <button class="btn btn-sm btn-outline-danger my-1">DELETE</button>
+        </form>
+          <a href="/products/<%=product._id%>/reviews/<%=review._id%>/edit" class="btn btn-sm btn-outline-success my-1">EDIT</a>
+        <% } %>
+      <%} %>
+  </div>
+  </div>
+  </div>
+</div>
+
+  <!-- -------------  ACCORDION ------------- -->
+
+  <div class="accordion accordion-flush d-lg-none" id="accordionFlush">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">DESCRIPTION</button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+        <div class="accordion-body">
+          <p><%=product.description %></p>
+          <p>Olfactory Group: <%= product.scent%></p>
+          <p>Gender: <%= product.gender.join(", ")%></p>
+          <p>Top Notes: <span class=" fst-italic"><%= product.notes.topNotes.join(", ")%></span></p>
+          <p>Middle Notes:<span class=" fst-italic"><%= product.notes.middleNotes.join(", ")%></span></p>
+          <p>Base Notes: <span class=" fst-italic"><%= product.notes.baseNotes.join(", ") %></span></p>
+          <% if(product.launchYear && product.LaunchYear>0) {%> 
+          <p>Launch Year: <%= product.launchYear%></p>
+          <% } %> 
+      </div>
+    </div>
+  </div>
+  <div class=" accordion-item">
+   <h2 class="accordion-header" id="flush-headingTwo">
+     <button class="accordion-button border-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">REVIEWS</button>
+    </h2>
+  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
+    <div class="accordion-body">
+      <% if(currentUser){%>
+        <form class="needs-validation my-3" method="POST" action="/products/<%= product._id%>/reviews" novalidate>
+          <div class="stars">
+            <i class="bi bi-star custom-stars-red"></i>
+            <i class="bi bi-star custom-stars-red"></i>
+            <i class="bi bi-star custom-stars-red"></i>
+            <i class="bi bi-star custom-stars-red"></i>
+            <i class="bi bi-star custom-stars-red"></i>
+            <label for="rating2" class="form-label"></label>
+            <input type="range" class="form-range d-none" min="1" max="5" id="rating2" value="1" name="rating" />
+          </div>
+          <div class="mb-3">
+            <label for="review-body2" class="form-label"></label>
+            <textarea class="form-control" id="review-body2" style="height: 100px" name="body" placeholder="add your review here..." required></textarea>
+          </div>
+            <button class="btn btn-outline-secondary">Add review</button>
+        </form>
+      <% } %>
+      <% for(let review of product.reviews){%>
+        <div class="card mt-3 review">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="card-title fst-italic fs-6"><%=review.author.username%>
+                <% for (let i=0; i<review.rating; i++) {%>
+                  <i class="bi bi-star-fill custom-stars-grey"></i>
+                <%}%>
+                <% for (let i=review.rating; i<5; i++) {%>
+                  <i class="bi bi-star custom-stars-grey"></i>
+                <%}%>
+              </p>
+              <p><span class="date-convert small"><%=(review.date)%></span></p>
+            </div>
+              <p class="card-text"><%=review.body%></p>
+                <% if(review.edited.edited) {%>
+                <p class="text-muted p-0 m-0">
+                  <span class="fst-italic small"> this review has been edited on <span class="date-convert small"><%= review.edited.date %></span></span></p>
+                <% } %>
+              </div>
+          </div>
+          <%if(currentUser && review.author.equals(currentUser._id)) {%>
+            <form class="d-inline" action="/products/<%=product._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+              <button class="btn btn-sm btn-outline-danger my-1">DELETE</button>
+            </form>
+            <a href="/products/<%=product._id%>/reviews/<%=review._id%>/edit" class="btn btn-sm btn-outline-success my-1">EDIT</a>
+          <% } %>
+          <%} %>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+      <script src="/JS/addToCart.js"></script>
+      <script src="/JS/dateConverter.js"></script>
+      <script src="/JS/imgsCarousel.js"></script>
+      <script src="/JS/starsFiller.js"></script>
+
+
+     

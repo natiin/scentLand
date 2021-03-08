@@ -1,0 +1,130 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 offset-md-1 offset-lg-2">
+            <p class="fw-bolder text-center mb-5">EDITING THE PRODUCT</p>
+            <form method="POST" class="needs-validation form-img-validate" action="/products/<%=product._id%>?_method=PUT" novalidate enctype="multipart/form-data">
+                <div class="mb-5">
+                    <p>Brand</p>
+                    <% for(let brand of brands){ %>
+                    <div class="form-check form-check-inline m-2 d-flex flex-wrap">
+                        <input class="form-check-inpu m-1" type="radio" id="flexRadio-<%=brand%>-edit" name="name[brand]" value="<%=brand.name%>" <%=product.name.brand === brand.name ? 'checked' : "" %> required>
+                        <label class="form-check-label" for="flexRadio-<%=brand%>-edit">  <%= brand.name%> </label>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="title-edit">Title</label>
+                    <input class="form-control" type="text" id="title-edit" name="name[title]" value="<%=product.name.title%>" required>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="description-edit">Description</label>
+                    <textarea class="form-control" type="text" id="description-edit" name="description" style="height: 100px" required><%= product.description%></textarea>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="topNotes-edit">Top Notes</label>
+                    <input class="form-control" type="text" id="topNotes-edit" name="notes[topNotes]" value="<%=product.notes.topNotes%>" required>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="middleNotes-edit">Middle Notes</label>
+                    <input class="form-control" type="text" id="middleNotes-edit" name="notes[middleNotes]" value="<%=product.notes.middleNotes%>" required>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="baseNotes-edit">Base Notes</label>
+                    <input class="form-control" type="text" id="baseNotes-edit" name="notes[baseNotes]" value="<%=product.notes.baseNotes%>" required>
+                </div>
+
+                <div class="mb-5">
+                    <label for="scent-edit" class="form-label">Scent</label>
+                    <input class="form-control" type="text" id="scent-edit" name="scent" value="<%=product.scent%>" required>
+                </div>
+                <div class="mb-5 gender">
+                    <p>Gender</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input checkFemale" type="checkbox" value="female" id="checkFemale-edit" name="gender" <%= (product.gender.includes("female")) ? "checked" : "" %>>
+                        <label class="form-check-label" for="checkFemale-edit">female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input checkMale" type="checkbox" value="male" id="checkMale-edit" name="gender" <%= (product.gender.includes("male")) ? "checked" : "" %>>
+                        <label class="form-check-label" for="checkMale-edit">male</label>
+                    </div>
+                    <div class="form-check  form-check-inline">
+                        <input class="form-check-input checkUnisex" type="checkbox" value="unisex" id="checkUnisex-edit" name="gender" <%= (product.gender.includes("unisex")) ? "checked" : "" %>>
+                        <label class="form-check-label" for="checkUnisex-edit">unisex</label>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <label for="launchYear-edit" class="form-label">Launch Year</label>
+                    <input class="form-control" type="text" id="launchYear-edit" name="launchYear" value="<%=product.launchYear%>">
+                </div>
+                <div class="mb-5">
+                    <p>Scent type</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="EDT" id="edt-radio-edit" name="type" <%=product.type  === "EDT" ? "checked" : "" %> required>
+                        <label class="form-check-label" for="edt-radio-edit">EDT </label>
+                    </div>
+                    <div class="form-check  form-check-inline">
+                        <input class="form-check-input" type="radio" value="EDP" id="edp-radio-edit" name="type"  <%=product.type === "EDP" ? "checked" : "" %> required>
+                        <label class="form-check-label" for="edp-radio-edit">EDP</label>
+                    </div>
+                </div>
+                <div class="prices-wrapper row mb-3 mx-0">
+                    <% for(let i=0; i< product.prices.length; i++){ %>
+                    <div class="price-wrapper col-4 mb-5">
+                        <div class="row mb-1">
+                            <label for="size-<%=i%>-edit" class="form-label">Size ml</label>
+                            <input class="form-control w-50 " type="text" id="size-<%=i%>-edit" name="prices[<%=i%>][size]" value="<%= product.prices[i].size%>" required>
+                        </div>
+                        <div class="row mb-1">
+                            <label for="price-<%=i%>-edit" class="form-label">Price £</label>
+                            <input class="form-control w-50" type="text" id="price-<%=i%>-edit" name="prices[<%=i%>][price]" value="<%=product.prices[i].price%>" required>
+                        </div>
+                        <div class="form-check mb-1">
+                            <input class="form-check-input is-on-sale" type="radio" id="onsale-<%=i%>-radio-edit" name="prices[<%=i%>][isOnSale]" value="true" <%= (product.prices[i].isOnSale) ? "checked" : "" %> required>
+                            <label class="form-check-label" for="onsale-<%=i%>-edit">on sale</label>
+                        </div>
+                        <div class="form-check mb-1">
+                            <input class="form-check-input regular-price" type="radio" id="regularprice-<%=i%>-radio-edit" name="prices[<%=i%>][isOnSale]" <%= (product.prices[i].isOnSale) ? "" : "checked" %> value="false" required>
+                            <label class="form-check-label" for="regularprice-<%=i%>-edit">regular price</label>
+                        </div>
+                        <div class="sale-price <%= product.prices[i].isOnSale ? "": "d-none" %> mb-1 row">
+                            <label for="saleprice-<%=i%>-edit" class="form-label">Sale Price £</label>
+                            <input class="form-control w-50 sale-price-input" type="text" id="saleprice-<%=i%>-edit" name="prices[<%=i%>][salePrice]" value="<%=product.prices[i].salePrice%>">
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="mb-5">
+                    <button class="btn btn-outline-secondary more-sizes">Add more sizes</button>
+                    <button class="btn btn-outline-secondary del-more-sizes">Delete</button>
+                </div>
+                <div class="my-3">
+                    <% product.images.forEach((img, indx) =>{%>
+                    <img src="<%= img.thumbnail%>" class="img-thumbnail">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="<%= img.filename%>" id="img-<%=indx %>"
+                            name="deleteImages[]">
+                        <label class="form-check-label" for="img-<%=indx %>">Delete</label>
+                    </div>
+                    <% }) %>
+                </div>
+                <div class="mb-5 image-form">
+                    <label for="image-edit" class="form-label">Add images (up to 2 per product max 500KB each)</label>
+                    <input class="form-control image-validate" type="file" id="image-edit" name="image" value="" multiple>
+                    <div class="images-fail d-none text-danger m-1">
+                        Too many files or file exceeded maximum size.
+                    </div>
+                </div>
+                <button class="btn btn-outline-secondary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/JS/validateImagesAmount.js"></script>
+<script src="/JS/validateForm.js"></script>
+<script src="/JS/validateGenderCheckboxes.js"></script>
+<script src="/JS/pricesHandler.js"></script>

@@ -1,0 +1,423 @@
+[
+  {
+    "name": {
+      "brand": "Chanel",
+      "title": "Chance Eau Fraiche"
+    },
+    "description": "A floral-sparkling fragrance in a round bottle. A surge of energy that sweeps you into a whirlwind of happiness and fantasy. An olfactory encounter with chance.",
+    "notes": {
+      "topNotes": ["lemon", "cedar", "citron"],
+      "middleNotes": ["water hyacinth", "pink pepper", "jasmine"],
+      "baseNotes": ["patchouli", "white musk", "vetiver", "teak wood", "iris", "amber"]
+    },
+    "scent": "chypre floral",
+    "gender": ["female"],
+    "launchYear": 2007,
+    "type": "EDT",
+    "price": {
+      "size": 50,
+      "price": 67
+    },
+    "images": [{"url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608330026/shop/chanel_fraiche_f7izod.jpg", "filename": "shop/chanel_fraiche_f7izod"}]
+
+  },
+  {
+    "name": {
+      "brand": "Gucci",
+      "title": "Eau de Parfum II"
+    },
+    "description": "Gucci II is a soft, fruity floral that sparkles with notes of mandarin, blackcurrant, violet, and blackberry, smoothed with jasmine, heliotrope, and cedarwood. Playful, yet elegant.",
+    "notes": {
+      "topNotes": ["black currant", "red berries", "cassia", "bitter orange", "mandarin orange"],
+      "middleNotes": ["blackberry", "peony", "violet", "freesia", "jasmine", "lily-of-the-valley"],
+      "baseNotes": ["cedar", "musk", "heliotrope"]
+    },
+    "scent": "floral fruity",
+    "gender": ["female"],
+    "launchYear": 2004,
+    "type": "EDP",
+    "price": {
+      "size": 30,
+      "price": 30
+    },
+    "images": [{"url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329951/shop/gucci_II_hajgbx.jpg", "filename": "shop/gucci_II_hajgbx"}]
+  },
+  {
+    "name": {
+      "brand": "Gucci",
+      "title": "Gucci Rush 2"
+    },
+    "description": "Gucci Rush 2 is a sensual blend of exotic florals with a deep and warm scent. It has spicy undertones of vanilla and patchouli.",
+    "notes": {
+      "topNotes": ["freesia", "lily-of-the-valley", "rose"],
+      "middleNotes": ["narcissus", "palm tree", "lily", "gardenia"],
+      "baseNotes": ["black currant", "musk", "oakmoss"]
+    },
+    "scent": "floral woody musk",
+    "gender": ["female"],
+    "launchYear": 2001,
+    "type": "EDT",
+    "price": {
+      "size": 30,
+      "price": 34.9
+    },
+    "images": [{"url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329905/shop/gucci_rush_2_f4jnod.jpg", "filename": "shop/gucci_rush_2_f4jnod"}]
+  },
+  {
+    "name": {
+      "brand": "Lacoste",
+      "title": "Pour Femme"
+    },
+    "description": "Lacoste Pour Femme is an elegant woody musky fragrance that embodies the free spirit of today's women. The fragrance is beautifully feminine, energetic and uplifting.",
+    "notes": {
+      "topNotes": ["pepper", "freesia", "apple"],
+      "middleNotes": ["heliotrope", "violet", "jasmine", "hibiscus", "rose"],
+      "baseNotes": ["suede", "sandalwood", "incense", "cedar", "labdanum"]
+    },
+    "scent": "floral woody musk",
+    "gender": ["female"],
+    "launchYear": 2003,
+    "type": "EDP",
+    "price": {
+      "size": 90,
+      "price": 29.95
+    },
+    "images": [{"url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329789/shop/lacoste_pour_famme_tzh3mw.jpg", "filename": "shop/lacoste_pour_famme_tzh3mw"}]
+  },
+  {
+    "name": {
+      "brand": "Lacoste",
+      "title": "Pour Homme"
+    },
+    "description": "acoste Pour Homme is a fresh perfume with a sophisticated edge. It is an elegantly balanced scent for a more mature and refined man. It features top notes of Italian bergamot, ruby grapefruit, plum and apple fuse, heart notes of juniper, cardamom, pink peppercorn and cinnamon, and base notes of rum, sandalwood, vanilla and musk.",
+    "notes": {
+      "topNotes": ["plum", "apple", "grapefruit", "bergamot"],
+      "middleNotes": ["cinnamon", "pink pepper", "cardamom", "juniper"],
+      "baseNotes": ["vanilla", "rum", "musk", "sandalwood", "cedar", "labdanum"]
+    },
+    "scent": "woody aromatic",
+    "gender": ["male"],
+    "launchYear": 2002,
+    "type": "EDT",
+    "price": {
+      "size": 100,
+      "price": 25.95
+    },
+    "images": [{"url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329679/shop/Lacoste_pour_homme_jqhver.jpg", "filename":"shop/Lacoste_pour_homme_jqhver"}]
+  },
+  {
+    "name": {
+      "brand": "Chanel",
+      "title": "Allure Homme Sport"
+    },
+    "description": "Allure Homme Sport by Chanel is a Woody Spicy fragrance for men. Allure Homme Sport was launched in 2004. The nose behind this fragrance is Jacques Polge. Top notes are Orange, Sea Notes, Aldehydes and Blood Mandarin; middle notes are Pepper, Neroli and Cedar; base notes are Tonka Bean, Vanilla, White Musk, Amber, Vetiver and Elemi resin.",
+    "notes": {
+      "topNotes": ["orange", "sea notes", "aldehydes", "blood mandarin"],
+      "middleNotes": ["pepper", "neroli", "cedar"],
+      "baseNotes": ["tonka bean", "vanilla", "white musk", "amber", "vetiver", "elemi resin"]
+    },
+    "scent": "woody spicy",
+    "gender": ["male"],
+    "launchYear": 2004,
+    "type": "EDT",
+    "price": {
+      "size": 50,
+      "price": 57
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329625/shop/chanel_allure_sport_gu73rp.jpg", "filename": "shop/chanel_allure_sport_gu73rp"}]
+  },
+  {
+    "name": {
+      "brand": "Viktor & Rolf",
+      "title": "Flowerbomb Bloom"
+    },
+    "description": "Bursting with freshness as a fruity floriental, the new Eau de Toilette has juicy top notes with a burst of pomegranate accord, bergamot and mandarin oils.",
+    "notes": {
+      "topNotes": ["pomegranate", "mandarin orange"],
+      "middleNotes": ["freesia", "mountain air", "damask rose", "jasmine"],
+      "baseNotes": ["woody notes"]
+    },
+    "scent": "floral",
+    "gender": ["female"],
+    "launchYear": 2017,
+    "type": "EDT",
+    "price": {
+      "size": 50,
+      "price": 56
+    },
+    "images": [{"url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329544/shop/viktor_rolf_flowerbomb_bloom_pbnssw.jpg", "filename": "shop/viktor_rolf_flowerbomb_bloom_pbnssw"}]
+  },
+  {
+    "name": {
+      "brand": "Viktor & Rolf",
+      "title": "Spicebomb"
+    },
+    "description": "Meet your latest addiction, Spicebomb Eau de Toilette. Viktor&Rolf’s explosive perfume for men is a weapon of mass seduction: pull the trigger of the grenade bottle to experience an addictive scent. Brace yourself for the strong spices, sensory contrasts, and woody trail",
+    "notes": {
+      "topNotes": ["pink pepper", "elemi", "bergamot", "grapefruit"],
+      "middleNotes": ["cinnamon", "saffron", "paprika"],
+      "baseNotes": ["tobacco", "leather", "vetiver"]
+    },
+    "scent": "woody spicy",
+    "gender": ["male"],
+    "launchYear": 2012,
+    "type": "EDT",
+    "price": {
+      "size": 50,
+      "price": 45
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329479/shop/spicebomb_viktor_rolf_tfhzyo.jpg", "filename": "shop/spicebomb_viktor_rolf_tfhzyo"}]
+  },
+  {
+    "name": {
+      "brand": "Dolce & Gabbana",
+      "title": "Light Blue"
+    },
+    "description": "This colourful, fresh, floral fruity Eau de Toilette reflects the sensuality of the Mediterranean lifestyle. A timeless design inspired by the classic Dolce&Gabbana parfum, Light Blue shape is confident but always very feminine. Its light blue cap evokes the clear skies of the Mediterranean. The bottle itself is strong, reflecting today's modern woman.",
+    "notes": {
+      "topNotes": ["sicilian lemon", "apple", "cedar", "bellflower"],
+      "middleNotes": ["bamboo", "jasmine", "white rose"],
+      "baseNotes": ["cedar", "musk", "amber"]
+    },
+    "scent": "floral fruity",
+    "gender": ["female", "unisex"],
+    "launchYear": 2001,
+    "type": "edt",
+    "price": {
+      "size": 25,
+      "price": 45
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608329400/shop/dolce_gabbana_light_blue_ptbmop.jpg", "filename": "shop/dolce_gabbana_light_blue_ptbmop"}]
+  },
+  {
+    "name": {
+      "brand": "Dolce & Gabbana",
+      "title": "The One"
+    },
+    "description": "The One for Men is a concentrate of elegance and sensuality. A fragrance that is both classic and modern, vibrant and engaging. A spicy, oriental perfume, developed on the harmony of tobacco with refined boisé notes.",
+    "notes": {
+      "topNotes": ["grapefruit", "coriander", "basil"],
+      "middleNotes": ["ginger", "cardamom", "orane blossom"],
+      "baseNotes": ["tobacco", "cedar", "amber"]
+    },
+    "scent": "woody spicy",
+    "gender": ["male"],
+    "launchYear": 2008,
+    "type": "edt",
+    "price": {
+      "size": 30,
+      "price": 44
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608324816/shop/dolce_gabbana_the_one_for_him_szuets.jpg", "filename": "shop/dolce_gabbana_the_one_for_him_szuets"}]
+  },
+  {
+    "name": {
+      "brand": "Lancome",
+      "title": "Vie Est Belle"
+    },
+    "description": "A feminine scent that takes its name from a well-known French expression meaning ‘Life is Beautiful’. Inspired by happiness, freedom and elegance that’s found in the everyday, this fragrance will surely make you smile at first spray.",
+    "notes": {
+      "topNotes": ["black currant", "pear"],
+      "middleNotes": ["iris", "jasmine", "orane blossom"],
+      "baseNotes": ["praline", "vanilla", "patchouli", "tonka bean"]
+    },
+    "scent": "Floral Fruity Gourmand",
+    "gender": ["female"],
+    "launchYear": 2012,
+    "type": "EDP",
+    "price": {
+      "size": 30,
+      "price": 54
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608325229/shop/lancome_la_vie_iksjtf.jpg", "filename": "shop/lancome_la_vie_iksjtf"}]
+  },
+  {
+    "name": {
+      "brand": "Lancome",
+      "title": "Tresor Midnight Rose"
+    },
+    "description": "Capture hearts with Lancôme's mischievous and playful fragrance, Trésor Midnight Rose. Charming and sexy, be truly unexpected with Trésor Midnight Rose.",
+    "notes": {
+      "topNotes": ["raspberry", "rose"],
+      "middleNotes": ["cassis", "pink pepper", "peony", "jasmine"],
+      "baseNotes": ["vanilla", "musk", "virginia cedar"]
+    },
+    "scent": "floral woody musk",
+    "gender": ["female"],
+    "launchYear": 2011,
+    "type": "EDP",
+    "price": {
+      "size": 30,
+      "price": 37
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608325404/shop/lancome_midnight_tresor_zvvccn.jpg", "filename": "shop/lancome_midnight_tresor_zvvccn"}]
+  },
+  {
+    "name": {
+      "brand": "Yves Saint Laurent",
+      "title": "Baby doll"
+    },
+    "description": "Sweet, flirty and fruity, YSL Baby Doll Eau de Toilette is a fun fragrance for women from designer brand Yves Saint Laurent",
+    "notes": {
+      "topNotes": ["black currant", "pineapple", "orange", "apple"],
+      "middleNotes": ["rose", "freesia", "heliotrope", "lily-of-the-valley"],
+      "baseNotes": ["cedar", "sandalwood", "vanilla", "tonka bean"]
+    },
+    "scent": "floral fruity",
+    "gender": ["female"],
+    "launchYear": 2000,
+    "type": "EDT",
+    "price": {
+      "size": 30,
+      "price": 21
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608325647/shop/ysl_baby_doll_cxmpdo.jpg", "filename": "shop/ysl_baby_doll_cxmpdo"}]
+  },
+  {
+    "name": {
+      "brand": "Yves Saint Laurent",
+      "title": "Black Opium"
+    },
+    "description": "The original Yves Saint Laurent Black Opıum Eau de Parfum. Featuring black coffee and sensual vanilla. Addictive and energising. Experience YSL Black Opium, the rock couture fragrance for women by Yves Saint Laurent. Addictive, unparalleled in provocation, deliberatively seductive.",
+    "notes": {
+      "topNotes": ["pear", "pink pepper", "orange blossom"],
+      "middleNotes": ["coffee", "jasmine", "bitter almond", "licorice"],
+      "baseNotes": ["vanilla", "patchouli", "cedar", "cashmere wood"]
+    },
+    "scent": "oriental vanilla",
+    "gender": ["female"],
+    "launchYear": 2014,
+    "type": "EDP",
+    "price": {
+      "size": 30,
+      "price": 56
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608326134/shop/ysl_black_opium_gzlelt.jpg", "filename": "shop/ysl_black_opium_gzlelt"}]
+  },
+  {
+    "name": {
+      "brand": "Marc Jacobs",
+      "title": "Daisy Eau So Fresh"
+    },
+    "description": "A fun, floral and youthful fragrance, Marc Jacobs Eau So Fresh Eau de Toilette is an essential spring perfume for women.",
+    "notes": {
+      "topNotes": ["green notes", "raspberry", "pear", "grapefruit"],
+      "middleNotes": ["violet", "litchi", "apple blossom", "rose", "jasmine"],
+      "baseNotes": ["musk", "plum", "virginia cedar"]
+    },
+    "scent": "floral fruity",
+    "gender": ["female"],
+    "launchYear": 2011,
+    "type": "EDT",
+    "price": {
+      "size": 30,
+      "price": 39.95
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608326418/shop/daisy_fresh_marc_jacobs_cpt1pk.jpg", "filename" :"shop/daisy_fresh_marc_jacobs_cpt1pk"}]
+  },
+  {
+    "name": {
+      "brand": "Marc Jacobs",
+      "title": "Men"
+    },
+    "description": "For a man who enjoys living with understated luxury, Marc Jacobs imagined a masculine fragrance with a presence that is warm and sensual, but never obvious. Marc Jacobs Men is a uniquely urbane scent with an original, modern style.",
+    "notes": {
+      "topNotes": ["cypress", "cardamom", "bergamot", "ginger", "cumin"],
+      "middleNotes": ["fig leaf", "water notes", "cyclamen", "rose"],
+      "baseNotes": ["tonka bean", "cedar", "oakmoss", "patchouli"]
+    },
+    "scent": "woody floral musk",
+    "gender": ["male"],
+    "launchYear": 2002,
+    "type": "EDT",
+    "price": {
+      "size": 125,
+      "price": 73
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608326746/shop/marc_jacobs_men_ivyaob.jpg", "filename": "shop/marc_jacobs_men_ivyaob"}]
+  },
+  {
+    "name": {
+      "brand": "Giorgio Armani",
+      "title": "Si"
+    },
+    "description": "Distinctive, creamy and catches attention, Armani SÌ is a floral perfume for women who are strong and graceful. Fresh, green and addictive in its initial impression, the elegance of Freesia and the exquisite honey hues of Rose De Mai absolute make this perfume truly distinctive. The long lasting and sensual notes of Oakmoss and Patchouli softly define this fragrance as a captivating modern chypre.",
+    "notes": {
+      "topNotes": ["cassis"],
+      "middleNotes": ["may rose", "freesia"],
+      "baseNotes": ["vanilla", "patchouli", "ambroxan", "woody notes"]
+    },
+    "scent": "Chypre Fruity",
+    "gender": ["female"],
+    "launchYear": 2013,
+    "type": "EDP",
+    "price": {
+      "size": 30,
+      "price": 55
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608327060/shop/si_g_armani_wpbl3v.jpg", "filename": "shop/si_g_armani_wpbl3v"}]
+  },
+  {
+    "name": {
+      "brand": "Hugo Boss",
+      "title": "Boss Bottled"
+    },
+    "description": "The iconic BOSS Bottled fragrance family celebrates the many facets of modern masculinity, reminding us that every man can be a Man of Today in his own way. Sharing a vibrant and masculine signature, each BOSS Bottled fragrance inspires men around the world to follow their own path forward while staying true to their core values of honesty, integrity, and authenticity.",
+    "notes": {
+      "topNotes": ["apple", "plum", "bergamot", "lemon", " oakmoss", "geranium"],
+      "middleNotes": ["cinnamon", "mahogany", "carnation"],
+      "baseNotes": ["vanilla", "sandalwood", "cedar", "vetiver", "olive tree"]
+    },
+    "scent": "woody spicy",
+    "gender": ["male"],
+    "launchYear": 1998,
+    "type": "EDT",
+    "price": {
+      "size": 100,
+      "price": 34.5
+    },
+    "images": [{"url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608327391/shop/boss_bottled_tv0qxo.jpg", "filename": "shop/boss_bottled_tv0qxo"}]
+  },
+  {
+    "name": {
+      "brand": "Hugo Boss",
+      "title": "Ma vie Pour Femme"
+    },
+    "description": "BOSS Ma Vie Pour Femme was inspired by the independent spirit of a woman as she pauses to indulge in the simple moments in life; in this moment,she is at her most captivating, exuding a glow of femininity and confidence. Fresh, indulgent and fulfilling, this perfume, created around the cactus flower invites you to take time to savour your life.",
+    "notes": {
+      "topNotes": ["cactus flower"],
+      "middleNotes": ["pink freesia", "rose", "jasmine"],
+      "baseNotes": ["woody notes", "cedar"]
+    },
+    "scent": "floral",
+    "gender": ["female"],
+    "launchYear": 2014,
+    "type": "EDP",
+    "price": {
+      "size": 30,
+      "price": 46
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608328002/shop/boss_ma_vie_nanpz5.jpg", "filename": "shop/boss_ma_vie_nanpz5"}]
+  },
+  {
+    "name": {
+      "brand": "Christian Dior",
+      "title": "Dior Homme Parfum"
+    },
+    "description": "",
+    "notes": {
+      "topNotes": ["tuscan iris", "italian orange"],
+      "middleNotes": ["leather", "rose"],
+      "baseNotes": ["sandalwood", "Ambrette", "Agarwood", "cedar"]
+    },
+    "scent": "leather",
+    "gender": ["male"],
+    "launchYear": 2014,
+    "type": "EDP",
+    "price": {
+      "size": 50,
+      "price": 62
+    },
+    "images": [{"url":"https://res.cloudinary.com/dxhrxhiwb/image/upload/v1608328551/shop/dior_homme_parfum_pnkems.jpg", "filename": "shop/dior_homme_parfum_pnkems"}]
+  }
+]

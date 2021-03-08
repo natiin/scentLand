@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+<div class="container my-3">
+  <div class="row align-items-center">
+    <% for(let brand of brands) {%>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card text-center mx-auto my-5 border-0" style="width: 18rem">
+        <% if(brand.images && brand.images.length) {%>
+        <img src="<%= brand.images[0].url%>" class="card-img-top custom-card-img-top mx-auto" alt="brand logo" />
+        <% } %>
+        <div class="card-body">
+          <h5 class="card-title"><%= brand.name%></h5>
+        </div>
+        <a class="stretched-link" href="/brands/<%=brand._id%>"></a>
+      </div>
+    </div>
+    <%}%>
+  </div>
+</div>

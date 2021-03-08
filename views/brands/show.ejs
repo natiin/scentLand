@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container my-3">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 col-md-12">
+      <div class="card p-3">
+        <% if(brand.images && brand.images.length) {%>
+        <img src="<%= brand.images[0].url%>" class="card-img-top mx-auto brand-show-page-logo-img" alt="brand-logo" />
+        <% } %>
+        <h5 class="card-title text-center"><%= brand.name%></h5>
+        <hr />
+        <div class="card-body text-center">
+          <p class="card-text text-justify"><%= brand.description%></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-10 offset-1">
+      <div class="row justify-content-evenly">
+        <% if(brand.products && brand.products.length) {%> <% for(let product of brand.products) {%>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card text-center mx-auto my-5 border-0" style="width: 18rem">
+            <% if(product.images && product.images.length) {%>
+            <img src="<%= product.images[0].url%>" class="card-img-top custom-card-img-top mx-auto" alt="scent photo" />
+            <% } %>
+            <div class="card-body">
+              <h5 class="card-title"><%= product.name.title%></h5>
+              <p class="card-text"><%= product.name.brand%></p>
+              <p class="avgRat"><%= product.calculateAvgRating() %></p>
+              <span class="d-none average"></span>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= product.type %></li>
+              <li class="list-group-item">from £<%= product.prices[0].price%></li>
+              <% if(product.prices.isOnSale) {%>
+              <li class="list-group-item text-danger"><i class="bi bi-percent"></i> SALE <i class="bi bi-percent"></i></li>
+              <% } %>
+            </ul>
+            <a class="stretched-link" href="/products/<%=product._id%>"></a>
+          </div>
+        </div>
+        <%}%> <% } %>
+      </div>
+    </div>
+  </div>
+</div>

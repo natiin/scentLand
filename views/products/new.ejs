@@ -1,0 +1,118 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 offset-md-1 offset-lg-2">
+            <p class="fw-bolder text-center mb-5">ADDING NEW PRODUCT</p>
+            <form class="needs-validation form-img-validate" method="POST" action="/products" novalidate enctype="multipart/form-data">
+                <div class="mb-5">
+                    <p>Brand</p>
+                    <% for(let brand of brands){ %>
+                    <div class="form-check form-check-inline m-1 d-flex flex-wrap">
+                        <input class="form-check-input" type="radio" id="flexRadio-<%=brand%>" name="name[brand]" value="<%=brand.name%>" required>
+                        <label class="form-check-label m-1" for="flexRadio-<%= brand%>"><%=brand.name%></label>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="name[title]" required>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" style="height: 100px" required></textarea>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="topNotes">Top Notes (separate by commas)</label>
+                    <input class="form-control" type="text" id="topNotes" name="notes[topNotes]" required>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="middleNotes">Middle Notes</label>
+                    <input class="form-control" type="text" id="middleNotes" name="notes[middleNotes]" required>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label" for="baseNotes">Base Notes</label>
+                    <input class="form-control" type="text" id="baseNotes" name="notes[baseNotes]" required>
+                </div>
+                <div class="mb-5">
+                    <label for="scent" class="form-label">Scent</label>
+                    <input class="form-control" type="text" id="scent" name="scent" required>
+                </div>
+                <div class="mb-5 gender">
+                    <p>Gender</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input checkFemale" type="checkbox" id="checkFemale" name="gender" value="female" required>
+                        <label class="form-check-label" for="checkFemale">female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input checkMale" type="checkbox" id="checkMale" name="gender" value="male" required>
+                        <label class="form-check-label" for="checkMale">male</label>
+                    </div>
+                    <div class="form-check  form-check-inline">
+                        <input class="form-check-input checkUnisex" type="checkbox" id="checkUnisex" name="gender" value="unisex" required>
+                        <label class="form-check-label" for="checkUnisex">unisex</label>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <label for="launchYear" class="form-label">Launch Year (optional)</label>
+                    <input class="form-control" type="text" id="launchYear" name="launchYear">
+                </div>
+                <div class="mb-5">
+                    <p>Scent type</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="edt-radio" name="type" value="EDT" required>
+                        <label class="form-check-label" for="edt-radio">EDT</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="edp-radio" name="type" value="EDP" required>
+                        <label class="form-check-label" for="edp-radio">EDP</label>
+                    </div>
+                </div>
+                <div class="prices-wrapper row mb-3 mx-0">
+                    <p class="mb-3">Prices options</p>
+                    <div class="price-wrapper col-4 mb-5">
+                        <div class="row mb-1">
+                            <label for="size-0" class="form-label">Size ml</label>
+                            <input class="form-control w-50" type="text" id="size-0" name="prices[0][size]" required>
+                        </div>
+                        <div class="row mb-1">
+                            <label for="price-0" class="form-label">Price £</label>
+                            <input class="form-control w-50" type="text" id="price-0" name="prices[0][price]" required>
+                        </div>
+                        <div class="form-check mb-1">
+                            <input class="form-check-input is-on-sale" type="radio" id="onsale-0-radio" name="prices[0][isOnSale]" value="true" required>
+                            <label class="form-check-label" for="onsale-0-radio">on sale</label>
+                        </div>
+                        <div class="form-check mb-1">
+                            <input class="form-check-input regular-price" type="radio" id="regularprice-0-radio" name="prices[0][isOnSale]" value="false" required>
+                            <label class="form-check-label" for="regularprice-0-radio">regular price</label>
+                        </div>
+                        <div class="sale-price mb-1 d-none row">
+                            <label for="saleprice-0" class="form-label">Sale Price £</label>
+                            <input class="form-control w-50 sale-price-input" type="text" id="saleprice-0" name="prices[0][salePrice]">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mb-5">
+                    <button class="btn btn-outline-secondary more-sizes">Add more sizes</button>
+                    <button class="btn btn-outline-secondary del-more-sizes">Delete</button>
+                </div>
+                <div class="mb-5 image-form">
+                    <label for="image" class="form-label">Add images (up to 2 per product max 500KB each)</label>
+                    <input class="form-control image-validate" type="file" id="image" name="image" value="" multiple required>
+                    <div class="images-fail d-none text-danger m-1">
+                        Too many files or file exceeded maximum size.
+                    </div>
+                </div>
+                <button class="btn btn-outline-secondary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/JS/validateImagesAmount.js"></script>
+<script src="/JS/validateForm.js"></script>
+<script src="/JS/validateGenderCheckboxes.js"></script>
+<script src="/JS/pricesHandler.js"></script>

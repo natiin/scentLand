@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-3">
+      <p class="fw-bolder text-center mb-5">ADD NEW BRAND</p>
+      <form class="needs-validation form-img-validate" method="POST" action="/brands" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+          <label class="form-label" for="brand-name">Brand Name</label>
+          <input class="form-control" type="text" id="brand-name" name="brand[name]" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="brand-description">Description</label>
+          <textarea class="form-control" id="brand-description" name="brand[description]" style="height: 100px" required></textarea>
+        </div>
+        <div class="mb-5 image-form">
+          <label for="image-brand" class="form-label">Add images (up to 2 per product max 500KB each)</label>
+          <input class="form-control image-validate" type="file" id="image-brand" name="brand[image]" value="" multiple required />
+          <div class="images-fail d-none text-danger m-1">Too many files or file exceeded maximum size.</div>
+        </div>
+        <button class="btn btn-outline-secondary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="/JS/validateImagesAmount.js"></script>
+<script src="/JS/validateForm.js"></script>

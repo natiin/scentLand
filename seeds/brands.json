@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Chanel",
+        "description": "Chanel S.A. is the fashion house founded in 1910 by Gabrielle Chanel (affectionately called 'Coco' by friends). Chanel created a real revolution in the fashion world with her simple, elegant fashions of timeless appeal. She was one of the first designers to introduce pants for women, and is widely credited as the creator of fashion staple 'the little black dress.' Ms. Chanel maintained creative control of the design company until her death in 1971. Karl Lagerfeld took the helm as chief designer in 1983. Chanel created a similar revolution in the world of perfume with its first fragrance, the iconic Chanel N°5, first introduced in 1921. This fragrance continues to be a worldwide bestseller, maintaining contemporary appeal with innovative advertising and celebrity endorsements. Chanel N°5 and many of the house's oldest enduring fragrances were created by Ernest Beaux. Since 1978 the in-house perfumer for Chanel has been Jacques Polge.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/chanel_bvbcge.jpg",
+                "filename": "shop/chanel_bvbcge"
+            }
+        ]
+    },
+    {
+        "name": "Yves Saint Laurent",
+        "description": "Yves Saint Laurent is the French fashion house founded by Yves Henri Donat Mathieu-Saint-Laurent. The house and designer are often abbreviated as YSL. Laurent's career in fashion began at the tender age of 17, when he served as assistant to Christian Dior. With Dior's death four years later, Laurent was named head of the house of Dior at just 21 years of age. Still a young man when the Algerian War of Independence broke out, Laurent was drafted into the army in 1960 and lost his position at Dior. Military service and despair over the loss of his design position resulted in a hospital stay. After a brief period of recuperation, Laurent started his own fashion company and went on to become one of the most influential fashion designers of the 1960s and 1970s. Laurent became known for his exquisitely-tailored women's suits, and is credited with creating the first women's tuxedo. The first designer to announce his expansion from couture into ready-to-wear, he is credited with making chic ready-to-wear fashions available to the mass market, and for making ready-to-wear a reputable business for designers. Laurent's ready-to-wear line was sold in boutiques named Rive Gauche, which would later be commemorated with a perfume.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/ysl_mxd5oa.jpg",
+                "filename": "shop/ysl_mxd5oa"
+            }
+        ]
+    },
+    {
+        "name": "Giorgio Armani",
+        "description": "Giorgio Armani is an Italian fashion designer particularly noted for his menswear. Armani started his career as designer of shop-windows in a department store and worked his way up to menswear buyer. From 1960 to 1972 he worked as a designer for the well-known house of Nino Cerutti and then worked as an independent designer for a number of fashion houses before founding his own brand. He presented his first collection of men's clothing in 1975, followed by a line for women that same year. Armani gained a wider audience for his work with the popular movie 'American Gigolo,' in which Richard Gere's character wore chic Armani designs. This was to be the first of many future film collaborations.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/armani_hkccje.jpg",
+                "filename": "shop/armani_hkccje"
+            }
+        ]
+    },
+    {
+        "name": "Viktor & Rolf",
+        "description": "Viktor & Rolf is an Amsterdam-based fashion house. The 'Viktor & Rolf' of the house's name are Viktor Horsting and Rolf Snoeren. Both Viktor and Rolf were born in 1969, and met when they studied fashion at the Academy of the Arts at Arnhem. The pair bear a slight physical resemblance to each other and are known for being photographed or strutting down the catwalk after the fashion shows in identical outfits.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/viktorrolf_rx1mqx.jpg",
+                "filename": "shop/viktorrolf_rx1mqx"
+            }
+        ]
+    },
+    {
+        "name": "Christian Dior",
+        "description": "Dolce&Gabanna is an Italian luxury fashion house founded in 1985 by Domenico Dolce and Stefano Gabbana. Making an immediate impact with their flashy, sexy clothing—for example, their signature 'corset dresses'—and provocative advertising, the house quickly gained fame and the loyalty of high-profile celebrity customers such as Madonna, who wears their fashions offstage and has hired the house to design costumes for her performances.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/dior_bbhefe.jpg",
+                "filename": "shop/dior_bbhefe"
+            }
+        ]
+    },
+    {
+        "name": "Hugo Boss",
+        "description": "Hugo Boss AG is a German fashion and lifestyle house, founded in 1924 by Hugo Boss. Originating in Metzingen and still based there today, the company offers multiple lines of fashions and accessories under the core brands Hugo and Boss. The Boss brand offers the following lines: Boss Black, modern classic clothing and the broadest range of products; Boss Orange, more unique and Bohemian in style; Boss Selection, high-end menswear; Boss Green, focusing on sports and active wear. The Hugo brand is known for its fashion-forward, European-influenced styles. The company produces fragrances in conjunction with Proctor & Gamble Prestige. Fragrances for men and women are offered under both the Boss and Hugo brands. The first fragrance was Boss Number One for men, launched in 1985.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/boss_dou5dn.jpg",
+                "filename": "shop/boss_dou5dn"
+            }
+        ]
+    },
+    {
+        "name": "Lacoste",
+        "description": "Lacoste is a French fashion house that sells clothing, footwear, watches, and perfume. The company was founded in 1933 by Rene Lacoste and Andre Gillier. They are most famous for their signature tennis wear—polo shirts featuring the company's green crocodile logo. Originally produced only in 'tennis white,' the company began offering this garment in 1952. The Lacoste tennis shirt was a staple of the early 1980s 'preppy' clothing trend and continues to be a best-seller today. The garment is endorsed by notable tennis champions such as Andy Roddick.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/lacoste_r13kpi.jpg",
+                "filename": "shop/lacoste_r13kpi"
+            }
+        ]
+    },
+    {
+        "name": "Gucci",
+        "description": "The House of Gucci was founded by Guccio Gucci in 1921. Inspired by the beautiful luggage he had seen travelers carrying while working at the Savoy Hotel in London, Gucci returned to Florence with a goal of combining the refined elegance of the wealthy travelers he observed with the fine craftmanship of traditional Florentine artisans.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/gucci_iko5w9.jpg",
+                "filename": "shop/gucci_iko5w9"
+            }
+        ]
+    },
+    {
+        "name": "Lancome",
+        "description": "Lancôme Paris is a French cosmetics company launched by Armand Petitjean, a former Coty employee, in 1935. The company's name was inspired by the ruins of a castle, Le Château de Lancosme, and the brand's rose symbol was inspired by the roses that surround it. Lancôme originated as a perfume company, launching five fragrances in time for the 1935 World's Fair in Brussels, Belgium. The company later expanded its offering to include cosmetics and skin care products for men and women. Today, the company maintains a high profile through its ad campaigns featuring top models and celebrities as captured by leading fashion photographers. A notable association with actress Isabella Rossellini lasted 14 years, and the company began featuring Rossellini's daughter, Elettra Rossellini Wiedemann, starting in 2009. Emma Watson of 'Harry Potter' fame recently advertised Lancôme's Tresor Midnight Rose fragrance.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/lancome_vuuige.jpg",
+                "filename": "shop/lancome_vuuige"
+            }
+        ]
+    },
+    {
+        "name": "Marc Jacobs",
+        "description": "Marc Jacobs is an American fashion designer born in 1963. He expressed an early interest in design and graduated from the High School of Art and Design in 1981, and continued his studies at Parsons School of Design in New York. A talented student, Marc won two Gold Thimble awards and a Design Student of the Year award while attending Parsons. He also designed and sold his first line of hand-knit sweaters while still a student.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443373/shop/marc_jacobs_aua67y.jpg",
+                "filename": "shop/marc_jacobs_aua67y"
+            }
+        ]
+    },
+    {
+        "name": "Dolce & Gabbana",
+        "description": "Dolce&Gabanna is an Italian luxury fashion house founded in 1985 by Domenico Dolce and Stefano Gabbana. Making an immediate impact with their flashy, sexy clothing—for example, their signature 'corset dresses'—and provocative advertising, the house quickly gained fame and the loyalty of high-profile celebrity customers such as Madonna, who wears their fashions offstage and has hired the house to design costumes for her performances.",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dxhrxhiwb/image/upload/v1612443372/shop/dolce_sulymc.jpg",
+                "filename": "shop/dolce_sulymc"
+            }
+        ]
+    }
+]

@@ -1,0 +1,66 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark" id="navbar">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="/home"><img src="https://res.cloudinary.com/dxhrxhiwb/image/upload/v1611576616/shop/bjq8h9jghh3zo9vfgkly.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse m-1 text-center" id="navbarSupportedContent">
+      <div class="navbar-nav fs-5">
+        <a class="nav-link custom-nav-link" href="/brands">BRANDS</a>
+        <a class="nav-link custom-nav-link" href="/products/womens">WOMENS</a>
+        <a class="nav-link custom-nav-link" href="/products/mens">MENS</a>
+        <a class="nav-link custom-nav-link" href="/products/offers">OFFERS</a>
+        <a class="nav-link custom-nav-link" href="/products/sale">SALE</a>
+        <% if(currentUser && currentUser.username==='admin' ) {%>
+          <a class="nav-link custom-nav-link text-danger fw-bolder" href="/products/admin">ADMIN'S PANEL</a>
+          <% } %>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse m-1 text-center" id="navbarSupportedContent">
+      <div class="navbar-nav ms-auto">
+        <% if(!currentUser) {%>
+          <a class="nav-link custom-nav-link fs-5" href="/login">LOGIN</a>
+          <a class="nav-link custom-nav-link fs-5" href="/register">REGISTER</a>
+          <% }else{ %>
+            <a class="nav-link custom-nav-link fs-5" href="/logout">LOGOUT</a>
+            <% } %>
+            <div class="d-flex justify-content-center navbar-icons-wrapper">
+              <a class="nav-link custom-nav-link m-1 p-0" href="/cart/show">
+                <i class="bi bi-basket3-fill fs-4" id="cart"></i>
+                <span class="fs-5 fw-bolder" id="cart-items">
+                  <%= (numOfItems && numOfItems> 0) ? numOfItems : "" %>
+                </span></a>
+              <a class="nav-link custom-nav-link m-1 p-0" href="/my-account"><i class="<%=(currentUser) ? " bi bi-person-check custom-bi-person-logged fs-3" : "bi bi-person fs-3" %>"></i></a>
+            </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-light p-0" id="search-container">
+  <div class="container-fluid justify-content-center">
+
+    <div class="dropdown d-flex">
+
+      <input class="form-control custom-form-control" type="search" placeholder="Search" aria-label="Search" id="search-input"><i class="bi bi-search fs-6 align-self-center"></i>
+      <ul class="dropdown-menu" aria-expanded="false"></ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  #cart {
+    transition: transform 0.2s;
+
+  }
+
+  #cart:hover {
+    font-size: 1.5rem;
+  }
+</style>
+
