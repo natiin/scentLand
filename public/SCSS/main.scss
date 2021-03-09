@@ -1,12 +1,10 @@
 $primary-color: #ff004e;
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
 $primary: #c9c7c7 !default;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
+body {
+  font-family: "Montserrat", sans-serif;
+}
 //   NAVBAR
 #search-input {
   border: none;
@@ -154,6 +152,8 @@ $primary: #c9c7c7 !default;
   .price-box {
     margin: 0 auto;
   }
+
+  //CART PAGE
   .delete-item,
   .update-item {
     margin: 0.1rem;
@@ -164,12 +164,7 @@ $primary: #c9c7c7 !default;
   .custom-card-img-show-page {
     width: 10rem;
   }
-  .card-title {
-    font-size: 1rem;
-  }
-  .card-subtitle {
-    font-size: 1rem;
-  }
+
   .price-box > h5,
   h6 {
     font-size: 1rem;

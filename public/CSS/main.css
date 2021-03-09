@@ -1,7 +1,3 @@
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
 /*!
  * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11334,6 +11330,10 @@ fieldset:disabled .btn {
   }
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 #search-input {
   border: none;
   min-width: 500px;
@@ -11509,12 +11509,6 @@ fieldset:disabled .btn {
 @media (max-width: 575px) {
   .custom-card-img-show-page {
     width: 10rem;
-  }
-  .card-title {
-    font-size: 1rem;
-  }
-  .card-subtitle {
-    font-size: 1rem;
   }
   .price-box > h5, .price-box > .h5, h6, .h6 {
     font-size: 1rem;
