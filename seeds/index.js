@@ -3,9 +3,10 @@ const products = require("./seeds.json");
 const brands = require("./brands.json");
 const Product = require("../models/product.js");
 const Brand = require("../models/brand.js");
-const { func } = require("joi");
+const dbURL = process.env.DB_URL;
 
-mongoose.connect("mongodb://localhost:27017/shop", {
+
+mongoose.connect(dbURL, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
