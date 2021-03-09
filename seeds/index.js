@@ -5,7 +5,6 @@ const Product = require("../models/product.js");
 const Brand = require("../models/brand.js");
 const dbURL = process.env.DB_URL;
 
-
 mongoose.connect(dbURL, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -16,7 +15,7 @@ mongoose.connect(dbURL, {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection db error"));
 db.once("open", () => {
-  console.log("Database connected");
+  console.log("Database connected!");
 });
 
 // const seedDB = async () => {
