@@ -4,6 +4,7 @@ const router = express.Router();
 const catchAsync = require("../utils/catchAsync.js");
 const users = require("../controllers/users");
 const { isLoggedIn } = require("../middleware.js");
+const User = require("../models/user");
 
 router.route("/register").get(users.registerForm).post(catchAsync(users.register));
 

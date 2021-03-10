@@ -41,7 +41,7 @@ db.once("open", () => {
   console.log("Database connected");
 });
 
-const secret = process.env.SECRET || "thisissecret";
+const secret = process.env.SECRET || "ilovecats";
 const store = MongoStore.create({
   mongoUrl: dbURL,
   secret,
@@ -56,6 +56,7 @@ const sessionConfig = {
   name: "session",
   secret,
   resave: false,
+  proxy: true,
   saveUninitialized: true,
   cookie: {
     httpOnly: true,
@@ -104,14 +105,14 @@ app.use(
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set("trust proxy", true);
 app.use(express.static(path.join(__dirname, "public")));
-
-/////////////////ROUTES/////////////////
 
 app.use((req, res, next) => {
   if (!["/login", "/register"].includes(req.originalUrl)) {
     req.session.returnUrl = req.originalUrl;
   }
+  console.log(res.locals.currentUser);
 
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
