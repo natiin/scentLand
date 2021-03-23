@@ -11480,6 +11480,15 @@ body {
   border-top: #00000036 1px solid;
 }
 
+@media (max-width: 992px) {
+  .navbar-icons-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media (max-width: 767px) {
   #main-image-scent {
     margin-bottom: 2rem;
@@ -11515,15 +11524,6 @@ body {
   }
   #search-input {
     min-width: 90vw;
-  }
-}
-
-@media (max-width: 992px) {
-  .navbar-icons-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 /*# sourceMappingURL=main.css.map */
