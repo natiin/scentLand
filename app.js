@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== "production") {
-  //console.log(process.env.SECRET); mamy dostep do sekretu w kazdym pliku
+  //console.log(process.env.SECRET);
 
   require("dotenv").config();
 }
@@ -83,9 +83,9 @@ app.use(
   })
 );
 
-const scriptSrcUrls = ["https://cdn.jsdelivr.net"];
-const styleSrcUrls = ["https://cdn.jsdelivr.net", "https://fonts.googleapis.com/"];
-const fontSrcUrls = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"];
+const scriptSrcUrls = ["https://cdn.jsdelivr.net/"];
+const styleSrcUrls = ["https://cdn.jsdelivr.net/", "https://fonts.googleapis.com/", "https://fonts.gstatic.com/"];
+const fontSrcUrls = ["https://fonts.googleapis.com/", "https://fonts.gstatic.com/", "https://cdn.jsdelivr.net/"];
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -112,7 +112,6 @@ app.use((req, res, next) => {
   if (!["/login", "/register"].includes(req.originalUrl)) {
     req.session.returnUrl = req.originalUrl;
   }
-  console.log(res.locals.currentUser);
 
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
@@ -125,6 +124,7 @@ app.use((req, res, next) => {
   } else {
     res.locals.numOfItems = "";
   }
+
   return next();
 });
 

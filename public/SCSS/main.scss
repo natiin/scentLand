@@ -2,6 +2,7 @@ $primary-color: #ff004e;
 $primary: #c9c7c7 !default;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -139,7 +140,7 @@ body {
   }
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   #main-image-scent {
     margin-bottom: 2rem;
   }
